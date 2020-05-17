@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 224</title>
+</head>
+<body>
+    <script src="https://d3js.org/d3.v5.js"></script>
+
+    <h1 id="page-title">This is my first D3 Example!</h1>
+
+    <p>Here's my first paragraph.</p>
+
+    <p>Here are some reasons why D3 is cool:</p>
+
+    <ul>
+        <li>Makes data more engaging</li>
+        <li>Has built-in math helpers</li>
+        <li>Supports graph animations</li>
+        <li>Makes drawing graph axes a breeze</li>
+    </ul>
+
+    <div class="outer">
+        Here is an outer div
+        <div>
+            Here is an inner div
+            <div>
+                Here is the last div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // The callback function gets run once for each element
+        d3.selectAll("li")
+            .style("color", ( _ , i ) => {
+                return "rgba(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 1 + ")"
+            })
+
+        // Selection of the outer div by class selects the inner divs as well
+        // The second select selects the divs inside of the current selection
+        d3.select(".outer")
+            .style("color", "purple")
+          .select("div")
+            .style("font-size", "30px")
+            .style("background-color", "orange")
+          .select("div")
+            .style("border", "2px solid green")
+    </script>
+    
+</body>
+</html>
