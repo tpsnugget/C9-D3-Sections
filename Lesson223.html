@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 223</title>
+</head>
+<body>
+    <script src="https://d3js.org/d3.v5.js"></script>
+
+    <h1 id="page-title">This is my first D3 Example!</h1>
+
+    <p>Here's my first paragraph.</p>
+
+    <p>Here are some reasons why D3 is cool:</p>
+
+    <ul>
+        <li>Makes data more engaging</li>
+        <li>Has built-in math helpers</li>
+        <li>Supports graph animations</li>
+        <li>Makes drawing graph axes a breeze</li>
+    </ul>
+
+    <div>
+        Here's an outer div
+        <div>
+            Here's an inner div
+            <div>
+                Here's the last div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        d3.select("#page-title")
+            .style("background-color", "red")
+        d3.selectAll("li")
+            .style("color", "green")
+        d3.selectAll("div")
+            .style("color", "white")
+
+        // .style()
+        // .attr()
+        // .text()
+        // .html()
+        // .classed()
+
+        // These act as getters if no arguments
+        console.log(d3.select("li").text())
+        console.log(d3.select("li").style("color"))
+        console.log(d3.select("ul").text())
+    </script>
+    
+</body>
+</html>
